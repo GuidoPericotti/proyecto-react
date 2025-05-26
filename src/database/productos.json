@@ -1,0 +1,44 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "titulo": "Aceite de Coco Orgánico",
+      "descripcion": "Aceite de coco virgen extra, ideal para cocinar o como tratamiento capilar. 100% natural.",
+      "precio": 12.99,
+      "stock": 10,
+      "foto": "https://cdn.pixabay.com/photo/2019/09/23/03/07/coconut-oil-4497386_960_720.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Granola Casera sin Azúcar",
+      "descripcion": "Granola saludable y deliciosa, hecha con avena, frutos secos y sin azúcares añadidos. Perfecta para tu desayuno.",
+      "precio": 7.50,
+      "stock": 10,
+      "foto": "https://cdn.pixabay.com/photo/2022/02/02/20/57/granola-6989374_960_720.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Proteína Vegetal en Polvo",
+      "descripcion": "Proteína vegetal de guisante, ideal para deportistas y veganos. Rica en aminoácidos esenciales.",
+      "precio": 22.30,
+      "stock": 10,
+      "foto": "https://cdn.pixabay.com/photo/2012/06/08/17/59/flour-49689_1280.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "Té Verde Matcha Orgánico",
+      "descripcion": "Té verde matcha premium, cultivado en Japón. Ideal para aumentar la energía y concentración.",
+      "precio": 15.75,
+      "stock": 10,
+      "foto": "https://cdn.pixabay.com/photo/2017/05/30/12/20/matcha-2356768_1280.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "Chía Orgánica",
+      "descripcion": "Semillas de chía orgánicas, ricas en omega 3, fibra y antioxidantes. Perfectas para agregar a tus smoothies o ensaladas.",
+      "precio": 5.99,
+      "stock": 10,
+      "foto": "https://cdn.pixabay.com/photo/2019/02/10/02/45/chiaseed-3986385_960_720.jpg"
+    }
+  ]
+}
