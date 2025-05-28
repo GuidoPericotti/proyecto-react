@@ -1,15 +1,73 @@
-import React from 'react'
-import Header from '../components/common/Header'
-import Footer from '../components/common/Footer'
+import React from "react";
+import Header from "../components/common/Header";
+import Footer from "../components/common/Footer";
 
-const Nosotros = () => {
+const Nosotros = ({ cart, productos, borrarProducto, agregarCarrito }) => {
   return (
     <>
-    <Header />
-    <h1>Nosotros</h1>
-    <Footer />
-    </>
-  )
-}
+      <Header borrarProducto={borrarProducto} cartItems={cart} />
+      <section className="h-[100vh] py-20 bg-gray-100">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-6">
+            Conoce a MacroBox
+          </h2>
+          <p className="text-lg text-gray-600 mb-12">
+            En MacroBox, creemos en una alimentación consciente que nutre tanto
+            el cuerpo como la mente. Nuestro compromiso es ofrecer productos
+            saludables que se adapten a tu estilo de vida.
+          </p>
 
-export default Nosotros
+          <div className="flex justify-center gap-12">
+            <div className="w-1/3">
+              <img
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+                src="https://cdn.pixabay.com/photo/2014/07/10/05/02/seasoned-peanuts-388793_1280.jpg"
+                alt="Nuestro equipo"
+              />
+              <h3 className="mt-4 text-xl font-semibold text-gray-800">
+                Nuestro Equipo
+              </h3>
+              <p className="text-gray-600">
+                Un grupo apasionado y comprometido con la salud y el bienestar
+                de nuestros clientes.
+              </p>
+            </div>
+
+            <div className="w-1/3">
+              <img
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+                src="https://cdn.pixabay.com/photo/2014/07/10/05/02/seasoned-peanuts-388793_1280.jpg"
+                alt="Nuestros productos"
+              />
+              <h3 className="mt-4 text-xl font-semibold text-gray-800">
+                Nuestros Productos
+              </h3>
+              <p className="text-gray-600">
+                Seleccionados cuidadosamente para ofrecer calidad y nutrición en
+                cada bocado.
+              </p>
+            </div>
+
+            <div className="w-1/3">
+              <img
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+                src="https://cdn.pixabay.com/photo/2014/07/10/05/02/seasoned-peanuts-388793_1280.jpg"
+                alt="Nuestra misión"
+              />
+              <h3 className="mt-4 text-xl font-semibold text-gray-800">
+                Nuestra Misión
+              </h3>
+              <p className="text-gray-600">
+                Promover hábitos alimenticios saludables que contribuyan a una
+                vida plena y activa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </>
+  );
+};
+
+export default Nosotros;

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './layout/Home'
 import Nosotros from './layout/Nosotros'
@@ -34,16 +33,16 @@ function App() {
 
     const productInCart = cart.find((item) => item.id === product.id);
     if(productInCart){
-      setCart(cart.map((item) => item.id === product.id ? {...item, quantity:item.quantity+1} :item));
+      setCart(cart.map((item) => item.id === product.id ? {...item, quantity:item.quantity+cantidad} :item));
     }else{
-      setCart([...cart, {...product, quantity:1}]);
+      setCart([...cart, {...product, quantity:cantidad}]);
     }
   };
 
-const handleDeleteFromCart = (product) => {
+const handleDeleteFromCart = (productId) => {
   setCart(prevCart => {
     return prevCart.map(item => {
-      if (item.id === product.id) {
+      if (item.id === productId) {
         return { ...item, quantity: item.quantity - 1 };
       } else {
         return item;
@@ -61,11 +60,11 @@ const handleDeleteFromCart = (product) => {
       <Routes>
         <Route path='/' element={<Home borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} cargando={cargando} />} />
 
-        <Route path='/nosotros' element={<Nosotros  cart={cart} />} />
+        <Route path='/nosotros' element={<Nosotros borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} />} />
 
-        <Route path='/galeria' element={<GaleriaDeProductos  cart={cart} />} />
+        <Route path='/galeria' element={<GaleriaDeProductos borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} />} />
 
-        <Route path='/contacto' element={<Contacto  cart={cart} />} />
+        <Route path='/contacto' element={<Contacto cart={cart} />} />
         
         <Route path='/*' element={<NotFound />} />
 

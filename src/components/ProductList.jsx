@@ -1,14 +1,14 @@
 import React from 'react'
 import Productos from './Productos'
 
-const ProductList = ({ agregarCarrito, productos }) => {
+const ProductList = ({ borrarProducto, agregarCarrito, productos }) => {
+  
   return (
     <>
-      <h2>Galeria de Productos</h2>
-      <div className="flex flex-wrap justify-spacevenly p-4">
+      <div className="flex flex-wrap justify-center p-4">
         {
           productos.map(productos=>(
-            <Productos agregarCarrito={agregarCarrito} key={productos.id} productos={productos} />
+            <Productos borrarProducto={borrarProducto} agregarCarrito={agregarCarrito} key={productos.id} productos={productos} />
           ))
         }
       </div>
