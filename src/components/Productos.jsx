@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 const Product = ({ borrarProducto, productos, agregarCarrito }) => {
 
@@ -22,16 +23,16 @@ const Product = ({ borrarProducto, productos, agregarCarrito }) => {
 
         <div className="flex items-center justify-center mt-4">
            <button className="cursor-pointer bg-gray-300 p-2 rounded-xl hover:bg-gray-400 transition" onClick={decrease}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" d="M5 12h14" />
             </svg>
            </button>
 
            <span className="px-4 text-gray-900">{cantidad}</span>
 
            <button className="cursor-pointer bg-gray-300 p-2 rounded-xl hover:bg-gray-400 transition" onClick={increase}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
            </button>
 
@@ -46,6 +47,10 @@ const Product = ({ borrarProducto, productos, agregarCarrito }) => {
           >
             Agregar al carrito
           </button>
+
+          <div className="flex items-center justify-center cursor-pointer mt-4 w-full text-gray-900 py-3 rounded-b-lg hover:text-yellow-600 transition">
+            <Link to={`/galeria/${productos.id}`}> Ver mas </Link>
+          </div>
         </div>
     </section>
   )

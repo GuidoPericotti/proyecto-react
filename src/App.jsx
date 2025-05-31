@@ -5,6 +5,7 @@ import Nosotros from './layout/Nosotros'
 import GaleriaDeProductos from './layout/GaleriaDeProductos'
 import Contacto from './layout/Contacto'
 import NotFound from './layout/NotFound'
+import DetallesProducto from './components/DetallesProducto'
 
 function App() {
   const [cart, setCart] = useState([])
@@ -13,7 +14,7 @@ function App() {
   const [error, setError] = useState([false])
 
   useEffect( ()=> {
-    fetch('./src/database/productos.json')
+    fetch('../public/productos.json')
     .then(respuesta => respuesta.json())
     .then(datos => {
       setTimeout(()=>{
@@ -63,6 +64,8 @@ const handleDeleteFromCart = (productId) => {
         <Route path='/nosotros' element={<Nosotros borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} />} />
 
         <Route path='/galeria' element={<GaleriaDeProductos borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} />} />
+        
+        <Route path='/galeria/:id' element={<DetallesProducto productos={productos}/>} />
 
         <Route path='/contacto' element={<Contacto cart={cart} />} />
         

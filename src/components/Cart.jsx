@@ -8,8 +8,8 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-semibold text-gray-900">Carrito de Compras</h2>
           <button onClick={onClose} className="px-4 hover:bg-yellow-600 rounded-full bg-yellow-500 text-2xl font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
