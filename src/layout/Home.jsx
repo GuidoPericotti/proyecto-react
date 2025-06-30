@@ -1,16 +1,15 @@
 import React from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
+import { useCart } from "../context/CartContext"; // Importamos el hook
 
-const Home = ({
-  cart,
-  productos,
-  borrarProducto,
-  agregarCarrito,
-}) => {
+const Home = ({ productos }) => {
+  // Usamos el hook useCart para acceder a los valores y funciones del carrito
+  const { cartItems, addToCart, borrarProducto } = useCart();
+
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart} />
+      <Header cartItems={cartItems} borrarProducto={borrarProducto} /> {/* Pasamos cartItems a Header */}
       <main>
         <section
           className="h-[100vh] bg-cover bg-center relative flex justify-center items-center"
@@ -33,6 +32,7 @@ const Home = ({
             </a>
           </div>
         </section>
+
       </main>
 
       <Footer />

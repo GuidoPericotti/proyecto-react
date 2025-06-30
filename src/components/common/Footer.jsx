@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-300 text-gray-900 p-4">
-      <div className="container gap-x-4 mx-auto flex justify-between">
+    <footer className="bg-gray-900 text-gray-200 p-4">
+      <div className="flex flex-col md:flex-row gap-y-4 gap-x-4 mx-auto flex justify-between">
         <div>
           <div className="flex items-center">
             <h3 className="text-md font-semibold">MacroBox</h3>

@@ -6,8 +6,8 @@ const Nosotros = ({ cart, productos, borrarProducto, agregarCarrito }) => {
   return (
     <>
       <Header borrarProducto={borrarProducto} cartItems={cart} />
-      <section className="h-[100vh] py-20 bg-gray-100">
-        <div className="container mx-auto px-6 text-center">
+      <section className="h-auto py-20 bg-gray-100">
+        <div className="flex flex-col md:h-screen md:justify-center mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">
             Conoce a MacroBox
           </h2>
@@ -17,11 +17,11 @@ const Nosotros = ({ cart, productos, borrarProducto, agregarCarrito }) => {
             saludables que se adapten a tu estilo de vida.
           </p>
 
-          <div className="flex justify-center gap-12">
-            <div className="w-1/3">
+          <div className="flex flex-col items-center md:flex-row justify-center gap-12">
+            <div className="md:w-1/3">
               <img
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
-                src="https://cdn.pixabay.com/photo/2014/07/10/05/02/seasoned-peanuts-388793_1280.jpg"
+                src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg"
                 alt="Nuestro equipo"
               />
               <h3 className="mt-4 text-xl font-semibold text-gray-800">
@@ -33,7 +33,7 @@ const Nosotros = ({ cart, productos, borrarProducto, agregarCarrito }) => {
               </p>
             </div>
 
-            <div className="w-1/3">
+            <div className="md:w-1/3">
               <img
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
                 src="https://cdn.pixabay.com/photo/2014/07/10/05/02/seasoned-peanuts-388793_1280.jpg"
@@ -48,10 +48,10 @@ const Nosotros = ({ cart, productos, borrarProducto, agregarCarrito }) => {
               </p>
             </div>
 
-            <div className="w-1/3">
+            <div className="md:w-1/3">
               <img
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
-                src="https://cdn.pixabay.com/photo/2014/07/10/05/02/seasoned-peanuts-388793_1280.jpg"
+                src="https://cdn.pixabay.com/photo/2018/05/24/02/07/peach-3425656_1280.jpg"
                 alt="Nuestra misión"
               />
               <h3 className="mt-4 text-xl font-semibold text-gray-800">
